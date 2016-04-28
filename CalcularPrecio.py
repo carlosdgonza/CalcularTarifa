@@ -48,30 +48,18 @@ tarifa = tarifa()
 tarifa.dias_semana = float(input('Introduzca la tarifa para los dias de semana (Lun a Vie)'))
 tarifa.fines_semana = float(input('Introduzca la tarifa para los fines de semana (Sab y Dom)'))
 
-respuesta = 1
-while (0 < respuesta < 3):
-    respuesta=int(input(('''Introduzca la opcion que desee 
-        1- Modificar montos de las tarifas.
-        2- Calcular monto a pagar por un trabajo.
-        3- Salir del Sistema.
-            ''')))
-    
-    if respuesta == 1:
-        tarifa.dias_semana = float(input('Introduzca la nueva tarifa para los dias de semana (Lun a Vie) \n'))
-        tarifa.fines_semana = float(input('Introduzca la nueva tarifa para los fines de semana (Sab y Dom) \n'))
 
-    if respuesta == 2:
-        inicioTrabajo = input('Introduzca fecha de inicio del trabajo (dd/mm/aaaa-hh:mm) \n')
-        finTrabajo = input('Introduzca fecha de fin del trabajo (dd/mm/aaaa-hh:mm) \n')
 
-        inicioTrabajo = datetime.strptime(inicioTrabajo, formato)
-        finTrabajo = datetime.strptime(finTrabajo, formato)
+inicioTrabajo = input('Introduzca fecha de inicio del trabajo (dd/mm/aaaa-hh:mm) \n')
+finTrabajo = input('Introduzca fecha de fin del trabajo (dd/mm/aaaa-hh:mm) \n')
 
-        tiempoTrabajo = [inicioTrabajo,finTrabajo]
+inicioTrabajo = datetime.strptime(inicioTrabajo, formato)
+finTrabajo = datetime.strptime(finTrabajo, formato)
 
+tiempoTrabajo = [inicioTrabajo,finTrabajo]
 
         
-        print(tiempoTrabajo[1]-tiempoTrabajo[0])
-        print("Monto a pagar por el trabajo:", calcularPrecio(tarifa, tiempoTrabajo))    
-        print("")
+print(tiempoTrabajo[1]-tiempoTrabajo[0])
+print("\nMonto a pagar por el trabajo:", calcularPrecio(tarifa, tiempoTrabajo))    
+print("")
     
