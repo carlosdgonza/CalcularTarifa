@@ -3,6 +3,13 @@ import calendar
 import sys
 import unittest
 
+formato = "%d/%m/%Y-%H:%M"
+
+class tarifa:
+    dias_semana = 0
+    fines_semana = 0
+    
+
 class TestCalcularPrecios(unittest.TestCase):
     def testtimedelta15min(self):
         tarifa = Tarifa()
