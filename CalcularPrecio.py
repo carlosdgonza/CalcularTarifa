@@ -1,6 +1,5 @@
 '''
 Created on Apr 25, 2016
-
 @author: carlos
 '''
 
@@ -46,6 +45,9 @@ def calcularPrecio(tarifa, tiempoTrabajo):
         aux = aux+1
         
     return tarifaTotal
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> CasosInvalidosValen
     
