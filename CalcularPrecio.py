@@ -45,9 +45,4 @@ def calcularPrecio(tarifa, tiempoTrabajo):
         aux = aux+1
         
     return tarifaTotal
-<<<<<<< HEAD
-
-
-=======
->>>>>>> CasosInvalidosValen
     
